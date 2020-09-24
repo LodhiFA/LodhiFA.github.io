@@ -6,10 +6,7 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  echo "    OK
-
-  
-  ";
+  echo "OK";
   exit();
 
   // Replace contact@example.com with your real receiving email address
