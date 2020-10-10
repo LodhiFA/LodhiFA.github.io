@@ -81,6 +81,9 @@
                 if (obj.data('venobox')) {
                   return true;
                 }
+                
+                // adding right side content
+                var divPop;
 
                 // method to be used outside the plugin
                 plugin.VBclose = function() {
@@ -313,7 +316,7 @@
                         } else if (obj.data('vbtype') == 'video') {
                           loadVid(autoplay);
                         } else {
-                          content.html('<img src="'+dest+'">');
+                          content.html('<img src="'+dest+'">' + getPopUp(title));
                           preloadFirst();
                         }
                         option.cb_post_open(obj, gallIndex, thenext, theprev);
@@ -451,7 +454,7 @@
                     }
 
                     $preloader.show();
-
+                    
                     content.animate({
                       opacity : 0,
                     }, 500, function(){
@@ -473,7 +476,7 @@
                         } else if (destination.data('vbtype') == 'video') {
                             loadVid(autoplay);
                         } else {
-                            content.html('<img src="'+dest+'">');
+                            content.html('<img src="'+dest+'">' + getPopUp(title));
                             preloadFirst();
                         }
                         obj = destination;
@@ -809,3 +812,7 @@
         } // venobox
     }); // extend
 })(jQuery);
+
+function getPopUp(name) {
+    return '<div class="descPop"><h1>' + name + '</h1></div>';
+}

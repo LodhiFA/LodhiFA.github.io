@@ -31,6 +31,6 @@ function showMachines() {
     if (machineIndex > slides.length) {
         machineIndex = 1;
     }
-    slides[bottleIndex - 1].style.display = 'block';
-    setTimeout(showMachines, 4000);
+    slides[machineIndex - 1].style.display = 'block';
+    setTimeout(showMachines, 6000);
 }

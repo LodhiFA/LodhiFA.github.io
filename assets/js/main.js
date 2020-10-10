@@ -197,6 +197,23 @@
     // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function() {
       $('.venobox').venobox();
+      
+      $("#welcome").sliderResponsive({
+          // transition delay
+          slidePause: 3000,
+          // animation speed
+          fadeSpeed: 700,
+          // enable autoplay
+          autoPlay: "on",
+          // show navigation arrows
+          showArrows: "off",
+          // hide pagination bullets
+          hideDots: "on",
+          // show 'zoom on hover' effect
+          hoverZoom: "off",
+          // place the caption bar on the top
+          titleBarTop: "off"
+        });
     });
   });
 

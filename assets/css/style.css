@@ -466,6 +466,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .container {
   position: relative;
   padding-top: 132px;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
@@ -1811,4 +1812,15 @@ section {
     text-align: center;
     padding: 2px 0;
   }
+}
+
+.welcome {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
 }
