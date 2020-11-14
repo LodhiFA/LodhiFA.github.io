@@ -1,10 +1,12 @@
 
 var bottleIndex = 0;
 var machineIndex = 0;
+var vialIndex = 0;
 
 $(function () {
   showBottles();
   showMachines();
+  showVials();
 });
 
 function showBottles() {
@@ -33,4 +35,18 @@ function showMachines() {
     }
     slides[machineIndex - 1].style.display = 'block';
     setTimeout(showMachines, 6000);
+}
+
+function showVials() {
+    var i;
+    var slides = document.getElementsByClassName('vials');
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    vialIndex++;
+    if (vialIndex > slides.length) {
+      vialIndex = 1;
+    }
+    slides[vialIndex - 1].style.display = 'block';
+    setTimeout(showVials, 6000);
 }

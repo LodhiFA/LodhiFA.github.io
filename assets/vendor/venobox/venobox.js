@@ -814,5 +814,72 @@
 })(jQuery);
 
 function getPopUp(name) {
-    return '<div class="descPop"><h1>' + name + '</h1></div>';
+    return '<div class="descPop"><h1>' + name + '</h1>' + getDescription(name) + '</div>';
+}
+
+function getDescription(name) {
+    var result = "";
+    if (name == 'Machinery') {
+      result = "<div>" 
+      + "<ul>"
+      + "<li>Rotary Tablet Pre-press Machine</li>"
+      + "<li>Blister Packaging Machine</li>"
+      + "<li>Capsule Filling Machine</li>"
+      + "<li>Tube Filling and Sealing Machine</li>"
+      + "<li>Syrup, Oral Liquid, Tincture etc. Filling Line</li>"
+      + "<li>Lab Multi-Functional Extractor and Evaporator Set</li>"
+      + "<li>Stick Pack Machine For (Sugar, Salt, Coffee, Milk Powder, Liquid Paste Products)</li>"
+      + "</ul></div>";
+    }
+    else if (name == 'Packaging') {
+        result = "<div>" 
+        + "<ul>"
+        + "<li>Cold-Forming Aluminum Foil</li>"
+        + "<li>Aluminum Foil for Drug Blister Packing</li>"
+        + "<li>Laminated Strip Pack</li>"
+        + "<li>Pharmaceutical packaging composite film</li>"
+        + "<li>Aluminum/Polyethylene composite film for packing medicines</li>"
+        + "</ul></div>";
+    }
+    else if (name == 'Raw Materials') {
+        result = "<div>" 
+        + "<ul>"
+        + "<li>Herbal Extracts</li>"
+        + "<li>Medicine Plants</li>"
+        + "<li>In-active and Active Materials</li>"
+        + "</ul></div>";
+    }
+    else if (name.indexOf('Vials') >= 0) {
+        result = "<div>" 
+        + "<ul>"
+        + "<li>Injection Vials (All sizes)</li>"
+        + "<li>Molded Vials (All sizes)</li>"
+        + "<li>Tubular Vials (All sizes)</li>"
+        + "<li>Rubber Stoppers</li>"
+        + "<li>Euro Caps</li>"
+        + "</ul></div>";
+    }
+    else if (name == 'Bottles') {
+        result = "<div>" 
+        + "<ul>"
+        + "<li>PET Bottles for Syrup (All sizes)</li>"
+        + "<li>PET Bottles for Drops (All sizes)</li>"
+        + "<li>Eye drops Bottles (All sizes)</li>"
+        + "<li>Bottles for Colic drops</li>"
+        + "<li>Bottles for Nasal Spray</li>"
+        + "<li>Bottles for Mouthwash</li>"
+        + "<li>PET Jars for Tablets</li>"
+        + "<li>HDPE Jars for Tablets</li>"
+        + "<li>PP Tubes for CAC Tablets</li>"
+        + "</ul></div>";
+    }
+    else if (name.indexOf('Glass') >= 0) {
+        result = "<div>" 
+        + "<ul>"
+        + "<li>Glass Bottles for drops</li>"
+        + "<li>Widely used in Neutraceutical & Homeopathic Industry</li>"
+        + "</ul></div>";
+    }
+
+    return result;
 }

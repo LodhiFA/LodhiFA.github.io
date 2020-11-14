@@ -236,4 +236,8 @@
     aos_init();
   });
 
+  $('.sent-message').on('click', function(e) {
+    $(e.target).slideUp();
+  });
+
 })(jQuery);
