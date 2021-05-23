@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AS-Apology Try</title>
+    <link href="envelope/card.css" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="envelope/card.js"></script>
+  </head>
+
+  <body>
+    <div class="invitation">
+      <div class="envelope">
+        <div class="mask">
+          <div class="card">
+            <div class="face front">
+              <h1>
+                <img
+                  src="envelope/images/frontcard.jpg"
+                />
+              </h1>
+            </div>
+            <div class="face back">
+              <img
+                src="envelope/images/backcard.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flap"></div>
+      <button onclick="pullOut(); return false;">Please Open!</button>
+    </div>
+  </body>
+</html>
